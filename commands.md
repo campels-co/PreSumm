@@ -71,7 +71,7 @@ python train.py -task ext -mode test_text -test_from ../models/camembert.v0/mode
 python train.py -task ext -mode test_text -test_from ../models/camembert.v0/model.pt -text_src ../raw_data/potter.raw_src -result_path ../output/output_potter.txt -max_pos 512 -max_length 200 -alpha 0.95 -min_length 50
 ```
 
-```
+```bash
 $ python train.py -task ext -mode test_text -test_from ../models/camembert.v0/model.pt -text_src ../raw_data/potter.raw_src -result_path ../output/output_potter.txt -max_pos 512 -max_length 200 -alpha 0.95 -min_length 50
 
 [2020-02-20 15:19:52,712 INFO] Loading checkpoint from ../models/camembert.v0/model.pt
@@ -82,3 +82,5 @@ Traceback (most recent call last):
     opt = vars(checkpoint['opt'])
 KeyError: 'opt'
 ```
+
+C'est là que je bloque, je ne trouve rien sur le net, et j'ai beau "bidouillé" le code pour tenter des choses mais c'est sans succès, je n'arrive pas à utiliser le modèle Camembert avec PreSumm.
